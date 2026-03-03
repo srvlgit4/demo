@@ -27,7 +27,7 @@ def run_web_server():
 # CONFIGURATION
 # ==========================================
 # Best practice: Use Environment Variables on Render, but fallback to strings if missing
-TOKEN = os.environ.get("BOT_TOKEN", "8436841638:AAFz0JFN8fXxHqy5eQGFDLXeCUwn0JLcF4w")
+TOKEN = os.environ.get("BOT_TOKEN", "7848041378:AAFI3rXRkZpECImNAAqULQDCCs4dN9VLBoc")
 GROUP_ID = int(os.environ.get("GROUP_ID", -1003745983576))
 DEFAULT_DOCX_CHUNK = 50
 DEFAULT_EPUB_CHUNK = 500
