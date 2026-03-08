@@ -5,30 +5,16 @@ import asyncio
 import zipfile
 import html
 import gc
-import threading
 from docx import Document
-from flask import Flask
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
-
-# ==========================================
-# DUMMY WEB SERVER (KEEPS RENDER AWAKE)
-# ==========================================
-web_app = Flask(__name__)
-
-@web_app.route('/')
-def home():
-    return "Master Novel Bot is running 24/7!"
-
-def run_web_server():
-    port = int(os.environ.get("PORT", 8080))
-    web_app.run(host="0.0.0.0", port=port)
+from telegram.error import RetryAfter
 
 # ==========================================
 # CONFIGURATION
 # ==========================================
-TOKEN = os.environ.get("BOT_TOKEN", "8436841638:AAFz0JFN8fXxHqy5eQGFDLXeCUwn0JLcF4w") 
-GROUP_ID = int(os.environ.get("GROUP_ID", "-1003745983576"))
+TOKEN = "7848041378:AAFI3rXRkZpECImNAAqULQDCCs4dN9VLBoc" # <--- REPLACE WITH YOUR BOT TOKEN
+GROUP_ID = -1003745983576
 DEFAULT_DOCX_CHUNK = 50
 DEFAULT_EPUB_CHUNK = 500
 
@@ -37,14 +23,11 @@ document_queue = asyncio.Queue()
 user_chunk_sizes = {}
 pending_uploads = {}
 
-pattern_num = r"^(?:vol(?:ume)?\s*\d+\s*)?(?:chapter|ch|c|अध्याय|चैप्टर|#|नॉवेलटैप|उपन्यासटैप|सी|पेज|पृष्ठ|000)?\s*(\d+)(?:[:\s-]|$)"
-
 # ==========================================
-# LOGIC 1: DOCX SPLITTER (WITH TOC BYPASS)
+# LOGIC 1 & 2: TXT & DOCX SPLITTER 
 # ==========================================
-def split_docx_logic(input_path, output_dir, chunk_size, output_format):
+def split_text_based_logic(input_path, output_dir, chunk_size, output_format, is_txt_file=False):
     if not os.path.exists(output_dir): os.makedirs(output_dir)
-    doc = Document(input_path)
     base_name = os.path.splitext(os.path.basename(input_path))[0]
     collector = []
     generated_files = []
@@ -52,6 +35,7 @@ def split_docx_logic(input_path, output_dir, chunk_size, output_format):
     current_start = 1
     target_chapter = None
     first_chapter_found = False
+    pattern_num = r"^(?:vol(?:ume)?\s*\d+\s*)?(?:chapter|ch|c|अध्याय|चैप्टर|#|नॉवेलटैप|उपन्यासटैप|सी|पेज|पृष्ठ|000)?\s*(\d+)(?:[:\s-]|$)"
 
     def save_chunk(lines, start, end, format_type):
         ext = ".txt" if format_type == "txt" else ".docx"
@@ -69,8 +53,13 @@ def split_docx_logic(input_path, output_dir, chunk_size, output_format):
 
         generated_files.append(part_path)
 
-    lines = [para.text.strip() for para in doc.paragraphs]
-    del doc 
+    if is_txt_file:
+        with open(input_path, "r", encoding="utf-8", errors="ignore") as f:
+            lines = [line.strip() for line in f if line.strip()]
+    else:
+        doc = Document(input_path)
+        lines = [para.text.strip() for para in doc.paragraphs if para.text.strip()]
+        del doc 
 
     def is_toc_entry(index):
         lines_checked = 0
@@ -112,78 +101,11 @@ def split_docx_logic(input_path, output_dir, chunk_size, output_format):
     gc.collect() 
     return generated_files
 
-# ==========================================
-# LOGIC 2: TXT SPLITTER (NEW - HIGH SPEED)
-# ==========================================
+def split_docx_logic(input_path, output_dir, chunk_size, output_format):
+    return split_text_based_logic(input_path, output_dir, chunk_size, output_format, is_txt_file=False)
+
 def split_txt_logic(input_path, output_dir, chunk_size, output_format):
-    if not os.path.exists(output_dir): os.makedirs(output_dir)
-    base_name = os.path.splitext(os.path.basename(input_path))[0]
-    collector = []
-    generated_files = []
-
-    current_start = 1
-    target_chapter = None
-    first_chapter_found = False
-
-    def save_chunk(lines, start, end, format_type):
-        ext = ".txt" if format_type == "txt" else ".docx"
-        part_name = f"{start}_to_{end}-{base_name}{ext}" if end not in ["End", "Full"] else f"{end}-{base_name}{ext}"
-        if end == "End": part_name = f"{start}_to_End-{base_name}{ext}"
-        part_path = os.path.join(output_dir, part_name)
-
-        if format_type == "txt":
-            with open(part_path, "w", encoding="utf-8") as f: f.write("\n".join(lines))
-        else:
-            new_doc = Document()
-            for line in lines: new_doc.add_paragraph(line)
-            new_doc.save(part_path)
-            del new_doc 
-
-        generated_files.append(part_path)
-
-    # Read TXT extremely fast
-    with open(input_path, 'r', encoding='utf-8', errors='ignore') as f:
-        lines = [line.strip() for line in f if line.strip()]
-
-    def is_toc_entry(index):
-        lines_checked = 0
-        for j in range(index + 1, len(lines)):
-            if not lines[j]: continue
-            lines_checked += 1
-            if lines_checked > 8: break
-            if re.match(pattern_num, lines[j], re.IGNORECASE): return True
-        return False
-
-    for i, text in enumerate(lines):
-        if text and not first_chapter_found:
-            match = re.match(pattern_num, text, re.IGNORECASE)
-            if match and not is_toc_entry(i):
-                detected_num = int(match.group(1))
-                current_start = detected_num
-                target_chapter = detected_num + chunk_size
-                first_chapter_found = True
-
-        is_boundary = False
-        if text and first_chapter_found:
-            match = re.match(pattern_num, text, re.IGNORECASE)
-            if match and int(match.group(1)) == target_chapter:
-                is_boundary = True
-
-        if is_boundary:
-            if collector: save_chunk(collector, current_start, target_chapter - 1, output_format)
-            collector = [text]
-            current_start = target_chapter
-            target_chapter += chunk_size
-        else:
-            collector.append(text)
-
-    if collector:
-        end_marker = "End" if first_chapter_found else "Full"
-        save_chunk(collector, current_start, end_marker, output_format)
-
-    del lines
-    gc.collect() 
-    return generated_files
+    return split_text_based_logic(input_path, output_dir, chunk_size, output_format, is_txt_file=True)
 
 # ==========================================
 # LOGIC 3: HIGH-SPEED EPUB CRACKER
@@ -282,7 +204,7 @@ async def queue_worker():
             elif job['type'] == 'txt':
                 await status_msg.edit_text(f"⚡ Processing Fast TXT: `{file_name}` into chunks of {job['chunk_size']} as {format_name}...")
                 files = await loop.run_in_executor(None, split_txt_logic, input_path, output_dir, job['chunk_size'], job['format'])
-                err_msg = "⚠️ No chapters found. Is formatting correct?"
+                err_msg = "⚠️ No chapters found in TXT file."
                 intro_msg = f"📚 **{base_name}**\n👤 Uploaded by: {job['user_mention']}\n📄 Format: {format_name}"
 
             elif job['type'] == 'epub':
@@ -299,32 +221,40 @@ async def queue_worker():
             try:
                 topic = await context.bot.create_forum_topic(chat_id=GROUP_ID, name=base_name[:128])
                 thread_id = topic.message_thread_id
-                await status_msg.edit_text(f"✅ Created topic: **{base_name[:64]}**\n📤 Sending files...")
+                await status_msg.edit_text(f"✅ done: **{base_name[:64]}**\n📤 Sprinting files...")
                 await context.bot.send_message(chat_id=GROUP_ID, message_thread_id=thread_id, text=intro_msg)
-
-                if job['type'] in ['epub', 'txt']:
-                    with open(input_path, 'rb') as orig:
-                        await context.bot.send_document(chat_id=GROUP_ID, message_thread_id=thread_id, document=orig, caption=f"📁 Original {job['type'].upper()} File")
             except Exception as e:
                 await status_msg.edit_text(f"⚠️ Topic Error: Sending to main chat.")
 
             for f in files:
                 with open(f, 'rb') as doc:
-                    msg = await status_msg.reply_document(document=doc, filename=os.path.basename(f))
                     try:
+                        msg = await status_msg.reply_document(document=doc, filename=os.path.basename(f))
                         forward_args = {"chat_id": GROUP_ID, "from_chat_id": msg.chat.id, "message_id": msg.message_id}
-                        if thread_id: forward_args["message_thread_id"] = thread_id
+                        if thread_id: 
+                            forward_args["message_thread_id"] = thread_id
+                            
                         await context.bot.forward_message(**forward_args)
-                    except: pass
+                        await asyncio.sleep(0.3) 
 
-            await status_msg.reply_text("🎉 Done! Processing complete.")
+                    except RetryAfter as e:
+                        print(f"⚠️ Rate limited by Telegram! Pausing for {e.retry_after} seconds...")
+                        await asyncio.sleep(e.retry_after + 1)
+                        try:
+                            await context.bot.forward_message(**forward_args)
+                        except: pass
+                        
+                    except Exception as e:
+                        print(f"⚠️ Standard Error sending {os.path.basename(f)}: {e}")
+
+            await status_msg.reply_text("🎉 Done! All files sprinted successfully.")
 
         except Exception as e:
             await status_msg.edit_text(f"❌ Error: {e}")
         finally:
             if os.path.exists(job['temp_dir']): shutil.rmtree(job['temp_dir'])
             document_queue.task_done()
-            gc.collect() 
+            gc.collect()
 
 # ==========================================
 # BOT HANDLERS
@@ -332,8 +262,8 @@ async def queue_worker():
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     name = update.effective_user.first_name
     await update.message.reply_text(
-        f"👋 Hello {name}!\n\n"
-        f"Send me a **.docx**, **.txt**, or **.epub** file.\n"
+        f"👋 Hello {name}! \n\n"
+        f"Send me a docx, txt, or epub file.\n"
         f"`/set 500` - Change custom chunk size."
     )
 
@@ -389,6 +319,8 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = job_info['user_id']
 
     file_name = document.file_name
+    
+    # FIXED FOR RENDER: Removed Colab /content/ path
     temp_dir = f"temp_{user_id}_{msg_id}"
     input_path = os.path.join(temp_dir, file_name)
     os.makedirs(os.path.join(temp_dir, "output"), exist_ok=True)
@@ -422,20 +354,17 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def start_background_tasks(app: Application):
     asyncio.create_task(queue_worker())
 
-def main():
-    print("🤖 Starting Web Server for Render Keep-Alive...")
-    threading.Thread(target=run_web_server, daemon=True).start()
-
-    print("🤖 Ultimate Fast Cracker Bot Initializing...")
+async def main():
+    print("🤖 Ultimate Fast Cracker Bot Initializing on Render...")
     app = Application.builder().token(TOKEN).post_init(start_background_tasks).build()
-    
+    await app.bot.delete_webhook(drop_pending_updates=True)
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("set", set_chunk_size))
     app.add_handler(MessageHandler(filters.Document.ALL, handle_document))
     app.add_handler(CallbackQueryHandler(button_callback))
-    
-    print("🚀 Master Bot is LIVE! (Speed & Memory Optimized)")
-    app.run_polling(drop_pending_updates=True)
+    print("🚀 Master Bot is LIVE! (Speed, Memory & TXT Optimized)")
+    await app.run_polling(stop_signals=None)
 
 if __name__ == "__main__":
-    main()
+    # FIXED FOR RENDER: Clean standard asyncio execution
+    asyncio.run(main())
