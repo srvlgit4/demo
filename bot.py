@@ -1,8 +1,7 @@
 # ==========================================
 # STEP 1: INSTALL DEPENDENCIES (BeautifulSoup Removed)
 # ==========================================
-!apt-get install pandoc -y --quiet
-!pip install python-docx python-telegram-bot nest_asyncio --quiet
+
 
 import os
 import re
