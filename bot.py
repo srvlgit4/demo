@@ -10,13 +10,11 @@ import asyncio
 import zipfile
 import html
 import gc
-import nest_asyncio
 from docx import Document
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 
 # FIX: Allow nested event loops in Colab
-nest_asyncio.apply()
 
 # ==========================================
 # CONFIGURATION
