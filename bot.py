@@ -40,6 +40,587 @@ PROMO_MESSAGE = (
 )
 
 # ==========================================
+# MASTER REPLACEMENT DICTIONARY (540+ Entries)
+# ==========================================
+MASTER_REPLACEMENTS= { "chapter":"noveltap"}
+MASTER_REPLACEMENTS1 = {
+  "Dongfang": "Raghuvanshi",
+  "Ouyang": "Suryavanshi",
+  "Dugu": "Sanyal",
+  "Zhuge": "Chanakya",
+  "Situ": "Dixit",
+  "Linghu": "Goswami",
+  "Yuchi": "Rathore",
+  "Gongsun": "Acharya",
+  "Nangong": "Solanki",
+  "Murong": "Sisodia",
+  "Xuanyuan": "Agnihotri",
+  "Huangfu": "Marwah",
+  "Xiahou": "Chauhan",
+  "Duanmu": "Upadhyay",
+  "Ximen": "Lodha",
+  "Wenren": "Chaturvedi",
+  "Zhangsun": "Raje",
+  "Baili": "Bhushan",
+  "Sima": "Joshi",
+  "Qin Hao": "Rathore Hari",
+  "Li Nuo": "Verma Isha",
+  "Qinglong District": "Pratapgarh District",
+  "Little Mei": "Chhoti Meera",
+  "Sh City": "S. City",
+  "Wchang": "Vikramgunj",
+  "Songjian": "Solanki",
+  "Misaka": "Mishra",
+  "Tianming": "Devendra",
+  "Jingxiao": "Shaurya",
+  "Deyi": "Vinay",
+  "Shao": "Palak",
+  "Mikoto": "Aadya",
+  "Nuomi": "Mishthi",
+  "Nuo": "Isha",
+  "Zhao": "Jahnavi",
+  "Li": "Anika",
+  "Wang": "Priyanka",
+  "Qin": "Dia",
+  "Xie": "Gayatri",
+  "Gu": "Leela",
+  "Lu": "Ketan",
+  "Shen": "Pallavi",
+  "Fu": "Kunika",
+  "Han": "Vivaan",
+  "Lan": "Devika",
+  "Xiao": "Gaurika",
+  "Chu": "Reddy",
+  "Huo": "Shekhawat",
+  "Bai": "Bhatt",
+  "Mo": "Nayan",
+  "Ye": "Harini",
+  "Yan": "Ridhima",
+  "Leng": "Lal",
+  "Chen": "Chhavi",
+  "Zhang": "Kumar",
+  "Yang": "Soniya",
+  "Lin": "Kapil",
+  "Pei": "Nidisha",
+  "Feng": "Amit",
+  "Su": "Pooja",
+  "Wen": "Radha",
+  "Yun": "Rupali",
+  "Jiang": "Hrithik",
+  "Liu": "Kartik",
+  "Tang": "Pragati",
+  "Ruan": "Rao",
+  "Xia": "Ragini",
+  "Qiao": "Disha",
+  "Luo": "Kiran",
+  "Hua": "Anshika",
+  "Ying": "Alia",
+  "Ji": "Hemant",
+  "Qi": "Niharika",
+  "Qiu": "Nisha",
+  "Wu": "Radhika",
+  "Xiu": "Amara",
+  "Huang": "Harshal",
+  "Zhou": "Jiand",
+  "Xu": "Rashmi",
+  "Sun": "Poonam",
+  "Hu": "Gopal",
+  "Zhu": "Sanya",
+  "Gao": "Lara",
+  "Guo": "Madhu",
+  "Ma": "Kunal",
+  "Liang": "Manjari",
+  "Song": "Pia",
+  "Zheng": "Jasmin",
+  "Deng": "Deshmukh",
+  "Yuan": "Mansi",
+  "Cao": "Chauhan",
+  "Zeng": "Sadhana",
+  "Peng": "Nalini",
+  "Cai": "Choudhary",
+  "Ding": "Kirti",
+  "Pan": "Nidhi",
+  "Du": "Komal",
+  "Tian": "Megha",
+  "Ren": "Niti",
+  "Fang": "Aadhya",
+  "Zou": "Zala",
+  "Chong": "Chatterjee",
+  "Sui": "Naina",
+  "Mu": "Neela",
+  "Rong": "Nitya",
+  "Zuo": "Zala",
+  "Yue": "Bhavana",
+  "Cui": "Chaturvedi",
+  "Kang": "Jatin",
+  "Mao": "Dhriti",
+  "Guang": "Mitali",
+  "Gong": "Lavanya",
+  "Bao": "Barkha",
+  "You": "Hema",
+  "Sen": "Taruna",
+  "Deol": "Deol",
+  "Zian": "Abhay",
+  "Haotian": "Vyom",
+  "Jingheng": "Dhairya",
+  "Ruofei": "Madhav",
+  "Xinyu": "Khushi",
+  "Zimo": "Nisha",
+  "Yunzhe": "Rishi",
+  "Tianlang": "Ranveer",
+  "Siyuan": "Pratham",
+  "Zicheng": "Yash",
+  "Lingyun": "Gagan",
+  "Zhuo": "Kajal",
+  "Yifeng": "Pawan",
+  "Mubai": "Shwetan",
+  "Jiahao": "Lakshya",
+  "Xianyang": "Saurabh",
+  "Qinglei": "Vidyut",
+  "Hanlin": "Vedant",
+  "Yutong": "Alok",
+  "Zixuan": "Aaradhya",
+  "Shengjie": "Vijay",
+  "Haoyu": "Reya",
+  "Boran": "Vidya",
+  "Jianyu": "Vikram",
+  "Yunchuan": "Sagar",
+  "Tiancheng": "Devansh",
+  "Zirui": "Kushagra",
+  "Mingxu": "Uday",
+  "Shaohua": "Tarun",
+  "Wuji": "Ansh",
+  "Kexin": "Kavita",
+  "Zehao": "Yuvan",
+  "Jingrui": "Kian",
+  "Ziming": "Siddharth",
+  "Yuxuan": "Shanaya",
+  "Tianshu": "Kritika",
+  "Ruolin": "Harshal",
+  "Ziyang": "Shakuntala",
+  "Haoran": "Shanti",
+  "Yuchen": "Vimla",
+  "Shuai": "Sharma",
+  "Chenxi": "Nishant",
+  "Rongyan": "Abhishek",
+  "Ningyuan": "Prasanth",
+  "Mingyu": "Manika",
+  "Tianrui": "Vedika",
+  "Zihan": "Anshika",
+  "Dongheng": "Purav",
+  "Xiangyu": "Rahul",
+  "Zhilin": "Tarun",
+  "Aoran": "Shaurya",
+  "Chuan": "Kashish",
+  "Dawei": "Vishal",
+  "Enlai": "Anand",
+  "Guoliang": "Satyajeet",
+  "Honglei": "Gaurav",
+  "Jiaming": "Prakash",
+  "Kairui": "Kian",
+  "Linchuan": "Sameer",
+  "Maolin": "Nitin",
+  "Nianci": "Hriday",
+  "Pengfei": "Garud",
+  "Qihao": "Vaibhav",
+  "Ruisheng": "Utkarsh",
+  "Shihao": "Rohan",
+  "Tianyuan": "Dev",
+  "Weihan": "Uday",
+  "Xiaotian": "Devansh",
+  "Yanlin": "Mayank",
+  "Zhengyu": "Neil",
+  "Anbang": "Aryan",
+  "Baohua": "Yuvraj",
+  "Changming": "Digvijay",
+  "Deyan": "Chetan",
+  "Fengxian": "Mitul",
+  "Guangyao": "Shikhar",
+  "Haichuan": "Dhir",
+  "Jianfeng": "Veer",
+  "Kuan": "Parth",
+  "Liangyu": "Mohan",
+  "Mingzhe": "Rishi",
+  "Nanhai": "Piyush",
+  "Peiran": "Samar",
+  "Qinsheng": "Shaan",
+  "Runze": "Shreyas",
+  "Sicheng": "Rudra",
+  "Teng": "Pratima",
+  "Wanyuan": "Mayank",
+  "Xinghe": "Vishal",
+  "Yuanzhi": "Agastya",
+  "Zhaoming": "Nakul",
+  "Ao": "Acharya",
+  "Binyan": "Amit",
+  "Chengyu": "Divtej",
+  "Dian": "Kiran",
+  "Enyu": "Ekta",
+  "Feiran": "Faisal",
+  "Hanyuan": "Harish",
+  "Jie": "Ishaan",
+  "Longwei": "Karan",
+  "Mingchen": "Madhur",
+  "Nian": "Nair",
+  "Pang": "Pankaj",
+  "Qizhe": "Pranav",
+  "Shaoxi": "Sachin",
+  "Tiantong": "Tarun",
+  "Wenbin": "Varun",
+  "Xiang": "Gauri",
+  "Yanzhi": "Roopa",
+  "Zhihao": "Kiran",
+  "Anyu": "Aniruddh",
+  "Boyang": "Bhuvan",
+  "Daqing": "Deepak",
+  "Guangxu": "Jaideep",
+  "Kangjian": "Madhav",
+  "Nianzu": "Ojas",
+  "Qingling": "Ratan",
+  "Ruixiang": "Shailesh",
+  "Tiansheng": "Uday",
+  "Weiguo": "Upendra",
+  "Yongzheng": "Yashwant",
+  "Aiguo": "Bhaskar",
+  "Fuhua": "Harshad",
+  "Guoli": "Himanshu",
+  "Huai": "Mahima",
+  "Jianping": "Kartik",
+  "Keqing": "Kuldeep",
+  "Linyu": "Mayur",
+  "Minsheng": "Mukesh",
+  "Ningze": "Nishant",
+  "Pingchuan": "Piyush",
+  "Qiuming": "Rahul",
+  "Rongting": "Rajeev",
+  "Shanyuan": "Sameer",
+  "Tianlong": "Sanjay",
+  "Weidong": "Satish",
+  "Xiangming": "Sharad",
+  "Yanbin": "Siddharth",
+  "Yongkang": "Sudhir",
+  "Zhibin": "Tarun",
+  "Anmin": "Tushar",
+  "Boliang": "Utkarsh",
+  "Chenhai": "Vaibhav",
+  "Dongnan": "Vidyut",
+  "Guangming": "Yogendra",
+  "Huan": "Ahana",
+  "Jiaxing": "Adhiraj",
+  "Kunlun": "Amar",
+  "Libang": "Amogh",
+  "Mingyuan": "Angad",
+  "Nianyu": "Aniket",
+  "Pengju": "Ankur",
+  "Qisheng": "Anshuman",
+  "Rongshun": "Arijit",
+  "Tianzhu": "Arpan",
+  "Weihua": "Avinash",
+  "Xiaofeng": "Baldev",
+  "Yangsheng": "Bhupendra",
+  "Yongnian": "Brijesh",
+  "Zhidong": "Devesh",
+  "Anruo": "Alka",
+  "Bowen": "Digambar",
+  "Dongyang": "Gagandeep",
+  "Fuxian": "Hardik",
+  "Guangyuan": "Inderjit",
+  "Jiajin": "Jaswant",
+  "Kuankuan": "Kailash",
+  "Licong": "Kanishk",
+  "Mingzhou": "Lalitmohan",
+  "Ningxiang": "Madhukar",
+  "Pengnian": "Manmohan",
+  "Qiteng": "Mitul",
+  "Rongyao": "Murli",
+  "Shixiong": "Narendra",
+  "Tianyue": "Niranjan",
+  "Weilin": "Padmanabh",
+  "Xiaolong": "Pradyumna",
+  "Yanhe": "Raghunath",
+  "Yongqing": "Rajendra",
+  "Zhifang": "Ramakant",
+  "Anxiang": "Rameshwar",
+  "Boyu": "Bindu",
+  "Gaofeng": "Shobha",
+  "Guozhi": "Sharda",
+  "Jianan": "Zayan",
+  "Langlang": "Sunita",
+  "Lihua": "Kalyani",
+  "Minyan": "Sunanda",
+  "Ruilin": "Usha",
+  "Shuang": "Drishti",
+  "Tianyun": "Vimla",
+  "Weimin": "Vidya",
+  "Xiaoming": "Vijaypal",
+  "Yanjun": "Vasudha",
+  "Yongtai": "Vasundhara",
+  "Changhai": "Aruna",
+  "Renhao": "Jyoti",
+  "Gen": "Bharti",
+  "Hai": "Divit",
+  "Miao": "Dhriti",
+  "Quan": "Nishita",
+  "Tie": "Uma",
+  "Xueer": "Ira",
+  "Qingxue": "Himani",
+  "Mengyao": "Ananya",
+  "Yurou": "Komal",
+  "Ling'er": "Diya",
+  "Shiyin": "Kavya",
+  "Xinyan": "Ishita",
+  "Zhiwei": "Vedika",
+  "Wanwan": "Ekta",
+  "Feifei": "Priya",
+  "Ruxue": "Shweta",
+  "Ning'er": "Shanti",
+  "Yuer": "Chandni",
+  "Qingge": "Geet",
+  "Muxue": "Isha",
+  "Yinuo": "Avani",
+  "Sujin": "Sarita",
+  "Tingting": "Anushka",
+  "Xiaoxiao": "Vineeta",
+  "Xuanxuan": "Myra",
+  "Ranran": "Saumya",
+  "Yanyan": "Yamini",
+  "Lele": "Muskan",
+  "Huanhuan": "Namrata",
+  "Tiantiand": "Mishthi",
+  "Yiyi": "Isha",
+  "Dandan": "Chhavi",
+  "Qingqing": "Aradhana",
+  "Momo": "Nimrit",
+  "Lulu": "Palak",
+  "Nini": "Nyra",
+  "Sisi": "Sneha",
+  "Keke": "Kiara",
+  "Vivi": "Vidhi",
+  "Chuchu": "Pihu",
+  "Weilei": "Chhavi",
+  "Tiantian": "Tulika",
+  "Qiqi": "Pari",
+  "Baobao": "Gungun",
+  "Beibei": "Bunty",
+  "Guoguo": "Mishri",
+  "Pingping": "Avishi",
+  "Anan": "Aditi",
+  "Feiyan": "Mayuri",
+  "Zhaojun": "Malini",
+  "Diaochan": "Urvashi",
+  "Yuhuan": "Menaka",
+  "Xishi": "Apsara",
+  "Mulan": "Jhansi",
+  "Hongyan": "Darshana",
+  "Sanniang": "Ganga",
+  "Susu": "Gauri",
+  "A'man": "Shakti",
+  "A'jiao": "Mohini",
+  "A'zi": "Chandi",
+  "A'zhu": "Lalita",
+  "Chunhua": "Basanti",
+  "Qiuyue": "Sharada",
+  "Xiameng": "Varsha",
+  "Dongmei": "Kshitij",
+  "Meiniang": "Rani",
+  "Wushuang": "Usha",
+  "傾城 (Qingcheng)": "Roopali",
+  "Guanghan": "Rohini",
+  "Chang'e": "Indu",
+  "Bixia": "Devika",
+  "Nüwa": "Jagdamba",
+  "Jiutian": "Gayatri",
+  "Yaochi": "Mandakini",
+  "Zixia": "Sandhya",
+  "Qingxia": "Alpana",
+  "Mofei": "Maya",
+  "Yasha": "Bhairavi",
+  "Luoshen": "Lakshmi",
+  "Jingwei": "Hansa",
+  "Hongxian": "Rashmi",
+  "Nieying": "Durga",
+  "Hongyu": "Ruby",
+  "Shiyi": "Pragya",
+  "Shishi": "Nupur",
+  "Yuanyuan": "Divya",
+  "Xiangjun": "Tulsi",
+  "Xiaowan": "Poonam",
+  "Rushi": "Sulochana",
+  "Wanru": "Priya",
+  "Ruoke": "Kirti",
+  "Zhaohua": "Jyoti",
+  "Yingluo": "Archana",
+  "Mansi": "Mansi",
+  "Yuning": "Prerna",
+  "Hanyue": "Chitra",
+  "Qingru": "Neha",
+  "Feixue": "Sheetal",
+  "Zhiyan": "Akarsh",
+  "Meiqi": "Kriti",
+  "Ruoxi": "Siya",
+  "Suyan": "Bhavna",
+  "Xinyi": "Ahana",
+  "Muchen": "Maya",
+  "Jinglin": "Kamlesh",
+  "Changge": "Krishna",
+  "Yunsheng": "Savita",
+  "Xuan": "Gitanjali",
+  "Ming": "Meera",
+  "Lei": "Anand",
+  "Sheng": "Navya",
+  "Jun": "Aditya",
+  "Bo": "Meghana",
+  "Yi": "Harshita",
+  "Hao": "Mukti",
+  "Rui": "Raman",
+  "Kun": "Parvati",
+  "Zhe": "Bhavesh",
+  "Fei": "Damini",
+  "Qiang": "Alok",
+  "Kai": "Jaideep",
+  "Yu": "Shivani",
+  "Xun": "Ria",
+  "Jing": "Anisha",
+  "Heng": "Misha",
+  "Tao": "Rahul",
+  "Ran": "Nistha",
+  "Shu": "Paridhi",
+  "Jue": "Rudrani",
+  "Lian": "Devika",
+  "Che": "Chetan",
+  "Qing": "Aradhana",
+  "Zhan": "Ishita",
+  "Xi": "Esha",
+  "Chao": "Mira",
+  "Xin": "Geeta",
+  "Yao": "Hansika",
+  "Wei": "Aarav",
+  "Yong": "Manisha",
+  "Hui": "Deepa",
+  "Shuo": "Vaibhavi",
+  "Cheng": "Karishma",
+  "Fan": "Dev",
+  "Xian": "Garima",
+  "Jia": "Deepika",
+  "Rong": "Aroma",
+  "Ning": "Nehal",
+  "Le": "Harshita",
+  "Dong": "Myra",
+  "Anqi": "Angel",
+  "Baoer": "Babita",
+  "Chunyan": "Chameli",
+  "Fangfang": "Phalguni",
+  "Guifen": "Geeta",
+  "Jiajia": "Jiya",
+  "Lili": "Leela",
+  "Meimei": "Mamata",
+  "Ningning": "Nisha",
+  "Peipei": "Pooja",
+  "Ruoruo": "Roopa",
+  "Shanshan": "Swati",
+  "Wenwen": "Vandana",
+  "Zhenzhen": "Zoya",
+  "Chun": "Kavita",
+  "Qian": "Nikita",
+  "Tianyu": "Kiran",
+  "Zichen": "Sheela",
+  "Yunche": "Lata",
+  "Ze": "Anuradha",
+  "Dai": "Khushi",
+  "Niu": "Nair",
+  "Shan": "Ojaswini",
+  "Tong": "Prisha",
+  "Zan": "Ira",
+  "Ben": "Nalini",
+  "Dan": "Chhavi",
+  "Gui": "Lisha",
+  "Tan": "Prachi",
+  "Zhong": "Jaya",
+  "Meng": "Lakshay",
+  "Xiong": "Ramya",
+  "Jiayuan": "Iyer",
+  "Guan": "Lipi",
+  "Zong": "Kalpana",
+  "Geng": "Lata",
+  "Zhai": "Ishani",
+  "Sang": "Sharma",
+  "Zha": "Zaveri",
+  "Pu": "Purohit",
+  "Qu": "Qureshi",
+  "Duan": "Kriti",
+  "Bian": "Bhatt",
+  "Ke": "Jay",
+  "Luan": "Lodha",
+  "Ge": "Gupta",
+  "Kan": "Kapoor",
+  "Wan": "Ekta",
+  "Zang": "Isha",
+  "Diao": "Dixit",
+  "Ban": "Banerjee",
+  "Xing": "Minal",
+  "Min": "Asha",
+  "Dou": "Dubey",
+  "Kou": "Kulkarni",
+  "Zhen": "Arunima",
+  "Kuang": "Kapoor",
+  "Ling": "Ananya",
+  "Gang": "Abhishek",
+  "Ce": "Chetan",
+  "Hou": "Girish",
+  "Jiao": "Mahi",
+  "Jiu": "Malini",
+  "Ju": "Mallika",
+  "Biao": "Manasi",
+  "Mian": "Lokesh",
+  "Shun": "Parul",
+  "Si": "Payal",
+  "Tu": "Priti",
+  "Zhuang": "Jyoti",
+  "Zi": "Kajol",
+  "Zu": "Kalyani",
+  "Bin": "Kamya",
+  "Bing": "Kanchan",
+  "Chang": "Kanishka",
+  "Da": "Kavya",
+  "De": "Mitushi",
+  "En": "Krupa",
+  "Fa": "Kumud",
+  "Huai": "Mahima",
+  "Zhun": "Dhruv",
+  "Qingyun": "Anant",
+  "Qinglong": "Pratap",
+  "Zhongyuan": "Madhya Bharat",
+  "Jiangnan": "Dakshin",
+  "Huaxia": "Bharat",
+  "Cangqiong": "Akash",
+  "Lingxiao": "Gagan",
+  "Jiuzhou": "Navdvip",
+  "Shenzhou": "Devbhumi",
+  "Kunlun Mountain": "Himalaya Mountain",
+  "Tianshan": "Kailash",
+  "Taihang": "Vindhya",
+  "Wudang": "Rishikesh",
+  "Shaolin": "Ashram",
+  "Penglai": "Swargadvip",
+  "Yuzhou": "Ujjain",
+  "Jingzhou": "Indraprastha",
+  "Yangzhou": "Ayodhya",
+  "Yingzhou": "Mathura",
+  "Qingzhou": "Kashi",
+  "Yuzhou City": "Ujjain City",
+  "Sanyan": "Trinetra",
+  "Xuanfeng": "Pawan",
+  "Liehuo": "Agni",
+  "Leiting": "Vidyut",
+  "Frost Sect": "Hima Sect",
+  "Shadow Sect": "Chhaya Sect",
+  "Golden Crow": "Surya Dev",
+  "White Tiger": "Shweta Vyaghra",
+  "Vermeil Bird": "Garuda",
+  "Black Tortoise": "Kurma"
+}
+
+# ==========================================
 # PRE-COMPILED UNWANTED SPAM PATTERNS (SPEED OPTIMIZED)
 # ==========================================
 RAW_UNWANTED_PATTERNS = [
@@ -52,91 +633,90 @@ RAW_UNWANTED_PATTERNS = [
     r"कृपया नॉवेल[\s\S]{0,50}?\"स्कमबैग टाइकून, आई कैन सी डिज़ायर\"[\s\S]{0,50}?\([\s\S]{0,10}?m\.shuhaige\.net[\s\S]{0,10}?\)[\s\S]{0,50}?को बुकमार्क करें।[\s\S]{0,100}?शुहागे नॉवेल नेटवर्क पूरे इंटरनेट पर सबसे तेज़ी से[\s\S]{0,50}?\"स्कमबैग टाइकून, आई कैन सी डिज़ायर\"[\s\S]{0,50}?को अपडेट करता है।"
 ]
 
-# Compile once for blazing fast performance on Render
 COMPILED_UNWANTED_PATTERNS = [re.compile(p, re.IGNORECASE) for p in RAW_UNWANTED_PATTERNS]
 
 UNWANTED_PHRASES = [
     'कृपया नॉवेल "स्कमबैग टाइकून, आई कैन सी डिज़ायर" (m.shuhaige.net) को बुकमार्क करें। शुहागे नॉवेल नेटवर्क पूरे इंटरनेट पर सबसे तेज़ी से "स्कमबैग टाइकून, आई कैन सी डिज़ायर" को अपडेट करता है।',
-    "फ्रेंडली रिमाइंडर: लॉग-इन यूज़र्स के लिए \"इंटरनल मैसेज\" फ़ंक्शन को ऑप्टिमाइज़ किया गया है। हम आपके मैसेज तुरंत पा सकते हैं और उनका जवाब दे सकते हैं। कृपया यूज़र सेंटर में \"इंटरनल मैसेज\" पेज देखें!",
-    "फ्रेंडली रिमाइंडर: लॉग-इन यूज़र अपने बुकशेल्फ़ डेटा को सभी डिवाइस पर परमानेंटली सेव कर सकते हैं। हम इस फ़ीचर का इस्तेमाल करने के लिए लॉग-इन करने की सलाह देते हैं.",
-    "ध्यान दें: लॉगिन यूज़र्स के \"साइट लेटर\" फ़ंक्शन को ऑप्टिमाइज़ कर दिया गया है, हम समय पर आपका मैसेज पा सकते हैं और उसका जवाब दे सकते हैं, कृपया देखने के लिए यूज़र सेंटर - \"साइट लेटर\" पेज पर जाएं!",
-    "एक फ्रेंडली रिमाइंडर: अगर आपको टाइटल से किताब नहीं मिल रही है, तो लेखक को खोजने की कोशिश करें; हो सकता है कि उन्होंने बस अपना नाम बदल लिया हो!",
-    "फ्रेंडली रिमाइंडर: पेज के ऊपर दाएं कोने में \"सिंपल/ट्रेडिशनल चाइनीज़ पर स्विच करें\", \"फॉन्ट साइज़ एडजस्ट करें\", और \"बैकग्राउंड कलर पढ़ें\" जैसे फंक्शन हैं।",
-    "अगर आपको कोई गलती मिले (टूटे हुए लिंक, नॉन-स्टैंडर्ड कंटेंट, वगैरह), तो प्लीज़ हमें बताएं < रिपोर्ट चैप्टर > ताकि हम उसे जल्द से जल्द ठीक कर सकें।",
-    "याद रखें: अगर आपको यह किताब पसंद है, तो कृपया इसे अपनी बुकशेल्फ़ में रख लें ताकि बाद में यह खो न जाए!",
-    "लोगों की मांग को देखते हुए, हम अब ऐड-फ़्री VIP मेंबरशिप फ़ीचर लॉन्च कर रहे हैं।",
-    "(बाद में एक और चैप्टर होगा)",
-    "अमरता की अजीब दुनिया https://",
-    "अमरता की विचित्र दुनिया के नवीनतम अध्यायों का सबसे तेज़ अपडेट!",
-    "Novel.com",
-    "www.wuxiaspot.com",
-    "novel543",
-    "biquge.tw",
-    "ixdzs8.com",
-    "wtr-lab",
-    "69shuba",
-    "webnovel",
-    "www.uukanshu.com",
-    "अगर आपको कोई गलती मिले (टूटे हुए लिंक, नॉन-STANDARd कंटेंट, वगैरह), तो कृपया हमें बताएं < रिपोर्ट चैप्टर > ताकि हम इसे जल्द से जल्द ठीक कर सकें।",
-    "(इसके बाद एक और चैप्टर आएगा)",
-    "फैंटेसी: सिस्टम शुरू में अपने आप लेवल अप हो जाता है",
-    "फैंटेसी: द सिस्टम ऑटोमैटिकली लेवल्स अप एट द START",
-    "फैंटेसी: द सिस्टम स्टार्ट्स WITH ऑटोमैटिक एंड फ्रेंज़ीड लेवलिंग अप",
-    "फैंटेसी: सिस्टम शुरू में अपने आप लेवल अप करता है",
-    "देखने के लिए क्लिक करें",
-    "अनुवादक: एटलस स्टूडियो संपादक: एटलस स्टूडियो",
-    "अनुवादक",
-    "एटलस स्टूडियो",
-    "संपादक",
-    "(1/2)",
-    "(2/2)",
-    "(1/1)",
-    "कुछ कारणों से आज अचानक बड़ी संख्या में उपयोगकर्ता इस साइट पर जाने के लिए वेब पेज नहीं खोल पा रहे हैं। कृपया घर का रास्ता खोजने के लिए इस साइट का डोमेन नाम www.wuxiaspot.com (साहित्य का पहला अक्षर + org dot com, wuxiaspot.com) याद रखने के लिए बुक करें दोस्तों!",
-    "यदि आप शहरी सुदृढ़ीकरण प्रणाली के पूरे क्षेत्र पर हावी होना चाहते हैं, तो कृपया एकत्र करें: (www.wuxiaspot.com) शहरी सुदृढ़ीकरण प्रणाली में साहित्य का सबसे तेज़ अद्यतन।",
-    "किसी कारण से, आज अचानक बड़ी संख्या में उपयोगकर्ता इस साइट पर जाने के लिए वेब पेज नहीं खोल सकते हैं। कृपया घर का रास्ता खोजने के लिए डोमेन नाम www.wuxiaspot.com (साहित्य का पहला अक्षर + ऑर्ग पॉइंट कॉम, wuxiaspot.com) याद रखने के लिए दोस्तों को बुक करें!",
-    "TL:", "TL Note:", "Translator:", "Editor:", "Novelfull",
-    "Read on Webnovel", "www.webnovel.com", "---", "***", "...",
-    "यदि यह पुस्तक आपके अधिकारों का उल्लंघन करती है, तो कृपया लेखक की कॉपीराइट शिकायत के त्वरित समाधान के लिए क्लिक करें।",
-    "अगर यह किताब आपके अधिकारों का उल्लंघन करती है, तो कृपया लेखक की कॉपीराइट शिकायत फास्ट ट्रैक तक पहुंचने के लिए क्लिक करें।",
-    "https://18188.mitemin.net/i573778/",
-    "▼रेफरेंस: उत्तरी वोइस्ट्रा को जीतने का एक मज़बूत और समय लेने वाला रास्ता",
-    "रेफरेंस: उत्तरी वोइस्ट्रा को जीतने का एक मज़बूत और समय लेने वाला रास्ता",
-    "https://18188.mitemin.net/i281912/",
-    "▼रेफरेंस: शॉर्ट-टर्म निर्णायक लड़ाई ने शिकिनॉन शहर, वोइस्ट्रा वेस्टERN रूट से मार्च करने पर मजबूर किया",
-    "https://18188.mitemin.net/i281913/",
-    "https://18188.mitemin.net/",
-    "मैंने अपनी एक्टिविटी रिपोर्ट अपडेट कर दी है, इसलिए अगर आप इंटरेस्टेड हैं तो प्लीज़ इसे देखें।",
-    "https://xmypage.syosetu.com/mypageblog/view/xid/175378/blogkey/307369/",
-    "आपके समर्थन के लिए धन्यवाद।",
-    "m9( ゜धम्) ओवरऑल रेटिंग 140,000 पॉइंट्स से ज़्यादा हो गई है।",
-    "https://18188.mitemin.net/i590561/",
-    "mitemin.net",
-    "https://18188.mitemin.net/","https://",
-    "विषय सूची URL: https://novel18.syosetu.com/n9598df/",
-    "novel18.syosetu.com",
-    "◇◆◇ कॉमिक रूपांतरण वर्तमान में MAGCOMI पर धारावाहिक रूप से प्रसारित हो रहा है ◇◆◇",
-    "कॉमिक रूपांतरण वर्तमान में MAGCOMI पर धारावाहिक रूप से प्रसारित हो रहा है",
-    "MAGCOMI",
-    "http://www.shuhaoxs.com/book/thxghp.html",
-    "पर क्लिक करें",
-    "http://www.shuhaoxs.com/list-27/ पर जाएं!",
-    "चार्मेंडर ने भी नए सदस्यों का स्वागत किया। फैनफिक्शन और डेरिवेटिव काम पसंद हैं? और जानने के लिए ",
-    "xiaoyaoshuwu",
-    ".com",
-    "yunlixs",
-    "Shuhaige Novel Network पूरे इंटरनेट पर सबसे तेज़ी से",
-    "52shuku ",
-    "लिंक्स: रैंकिंग लिस्ट ",
-    "बुक सर्च गाइड ",
-    "को बुकमार्क करना न भूलें या अपने दोस्तों को भी इसकी सलाह दें!",
-    "panshixsw",
-    "220book.com",
-    "URL: https://novel18.syosetu.com/n0922io/",
-    "URL: https://novel18.syosetu.com/",
-    "novel18.syosetu.com",
-    "sosoxsw.net",
-    "xszj520.com",
-    "http://www.shuhaoxs.com/book/"
+    'फ्रेंडली रिमाइंडर: लॉग-इन यूज़र्स के लिए "इंटरनल मैसेज" फ़ंक्शन को ऑप्टिमाइज़ किया गया है। हम आपके मैसेज तुरंत पा सकते हैं और उनका जवाब दे सकते हैं। कृपया यूज़र सेंटर में "इंटरनल मैसेज" पेज देखें!',
+    'फ्रेंडली रिमाइंडर: लॉग-इन यूज़र अपने बुकशेल्फ़ डेटा को सभी डिवाइस पर परमानेंटली सेव कर सकते हैं। हम इस फ़ीचर का इस्तेमाल करने के लिए लॉग-इन करने की सलाह देते हैं.',
+    'ध्यान दें: लॉगिन यूज़र्स के "साइट लेटर" फ़ंक्शन को ऑप्टिमाइज़ कर दिया गया है, हम समय पर आपका मैसेज पा सकते हैं और उसका जवाब दे सकते हैं, कृपया देखने के लिए यूज़र सेंटर - "साइट लेटर" पेज पर जाएं!',
+    'एक फ्रेंडली रिमाइंडर: अगर आपको टाइटल से किताब नहीं मिल रही है, तो लेखक को खोजने की कोशिश करें; हो सकता है कि उन्होंने बस अपना नाम बदल लिया हो!',
+    'फ्रेंडली रिमाइंडर: पेज के ऊपर दाएं कोने में "सिंपल/ट्रेडिशनल चाइनीज़ पर स्विच करें", "फॉन्ट साइज़ एडजस्ट करें", और "बैकग्राउंड कलर पढ़ें" जैसे फंक्शन हैं।',
+    'अगर आपको कोई गलती मिले (टूटे हुए लिंक, नॉन-स्टैंडर्ड कंटेंट, वगैरह), तो प्लीज़ हमें बताएं < रिपोर्ट चैप्टर > ताकि हम उसे जल्द से जल्द ठीक कर सकें।',
+    'याद रखें: अगर आपको यह किताब पसंद है, तो कृपया इसे अपनी बुकशेल्फ़ में रख लें ताकि बाद में यह खो न जाए!',
+    'लोगों की मांग को देखते हुए, हम अब ऐड-फ़्री VIP मेंबरशिप फ़ीचर लॉन्च कर रहे हैं।',
+    '(बाद में एक और चैप्टर होगा)',
+    'अमरता की अजीब दुनिया https://',
+    'अमरता की विचित्र दुनिया के नवीनतम अध्यायों का सबसे तेज़ अपडेट!',
+    'Novel.com',
+    'www.wuxiaspot.com',
+    'novel543',
+    'biquge.tw',
+    'ixdzs8.com',
+    'wtr-lab',
+    '69shuba',
+    'webnovel',
+    'www.uukanshu.com',
+    'अगर आपको कोई गलती मिले (टूटे हुए लिंक, नॉन-STANDARd कंटेंट, वगैरह), तो कृपया हमें बताएं < रिपोर्ट चैप्टर > ताकि हम इसे जल्द से जल्द ठीक कर सकें।',
+    '(इसके बाद एक और चैप्टर आएगा)',
+    'फैंटेसी: सिस्टम शुरू में अपने आप लेवल अप हो जाता है',
+    'फैंटेसी: द सिस्टम ऑटोमैटिकली लेवल्स अप एट द START',
+    'फैंटेसी: द सिस्टम स्टार्ट्स WITH ऑटोमैटिक एंड फ्रेंज़ीड लेवलिंग अप',
+    'फैंटेसी: सिस्टम शुरू में अपने आप लेवल अप करता है',
+    'देखने के लिए क्लिक करें',
+    'अनुवादक: एटलस स्टूडियो संपादक: एटलस स्टूडियो',
+    'अनुवादक',
+    'एटलस स्टूडियो',
+    'संपादक',
+    '(1/2)',
+    '(2/2)',
+    '(1/1)',
+    'कुछ कारणों से आज अचानक बड़ी संख्या में उपयोगकर्ता इस साइट पर जाने के लिए वेब पेज नहीं खोल पा रहे हैं। कृपया घर का रास्ता खोजने के लिए इस साइट का डोमेन नाम www.wuxiaspot.com (साहित्य का पहला अक्षर + org dot com, wuxiaspot.com) याद रखने के लिए बुक करें दोस्तों!',
+    'यदि आप शहरी सुदृढ़ीकरण प्रणाली के पूरे क्षेत्र पर हावी होना चाहते हैं, तो कृपया एकत्र करें: (www.wuxiaspot.com) शहरी सुदृढ़ीकरण प्रणाली में साहित्य का सबसे तेज़ अद्यतन।',
+    'किसी कारण से, आज अचानक बड़ी संख्या में उपयोगकर्ता इस साइट पर जाने के लिए वेब पेज नहीं खोल सकते हैं। कृपया घर का रास्ता खोजने के लिए डोमेन नाम www.wuxiaspot.com (साहित्य का पहला अक्षर + ऑर्ग पॉइंट कॉम, wuxiaspot.com) याद रखने के लिए दोस्तों को बुक करें!',
+    'TL:', 'TL Note:', 'Translator:', 'Editor:', 'Novelfull',
+    'Read on Webnovel', 'www.webnovel.com', '---', "***", "...",
+    'यदि यह पुस्तक आपके अधिकारों का उल्लंघन करती है, तो कृपया लेखक की कॉपीराइट शिकायत के त्वरित समाधान के लिए क्लिक करें।',
+    'अगर यह किताब आपके अधिकारों का उल्लंघन करती है, तो कृपया लेखक की कॉपीराइट शिकायत फास्ट ट्रैक तक पहुंचने के लिए क्लिक करें।',
+    'https://18188.mitemin.net/i573778/',
+    '▼रेफरेंस: उत्तरी वोइस्ट्रा को जीतने का एक मज़बूत और समय लेने वाला रास्ता',
+    'रेफरेंस: उत्तरी वोइस्ट्रा को जीतने का एक मज़बूत और समय लेने वाला रास्ता',
+    'https://18188.mitemin.net/i281912/',
+    '▼रेफरेंस: शॉर्ट-टर्म निर्णायक लड़ाई ने शिकिनॉन शहर, वोइस्ट्रा वेस्टERN रूट से मार्च करने पर मजबूर किया',
+    'https://18188.mitemin.net/i281913/',
+    'https://18188.mitemin.net/',
+    'मैंने अपनी एक्टिविटी रिपोर्ट अपडेट कर दी है, इसलिए अगर आप इंटरेस्टेड हैं तो प्लीज़ इसे देखें।',
+    'https://xmypage.syosetu.com/mypageblog/view/xid/175378/blogkey/307369/',
+    'आपके समर्थन के लिए धन्यवाद।',
+    'm9( ゜धम्) ओवरऑल रेटिंग 140,000 पॉइंट्स से ज़्यादा हो गई है।',
+    'https://18188.mitemin.net/i590561/',
+    'mitemin.net',
+    'https://18188.mitemin.net/','https://',
+    'विषय सूची URL: https://novel18.syosetu.com/n9598df/',
+    'novel18.syosetu.com',
+    '◇◆◇ कॉमिक रूपांतरण वर्तमान में MAGCOMI पर धारावाहिक रूप से प्रसारित हो रहा है ◇◆◇',
+    'कॉमिक रूपांतरण वर्तमान में MAGCOMI पर धारावाहिक रूप से प्रसारित हो रहा है',
+    'MAGCOMI',
+    'http://www.shuhaoxs.com/book/thxghp.html',
+    'पर क्लिक करें',
+    'http://www.shuhaoxs.com/list-27/ पर जाएं!',
+    'चार्मेंडर ने भी नए सदस्यों का स्वागत किया। फैनफिक्शन और डेरिवेटिव काम पसंद हैं? और जानने के लिए ',
+    'xiaoyaoshuwu',
+    '.com',
+    'yunlixs',
+    'Shuhaige Novel Network पूरे इंटरनेट पर सबसे तेज़ी से',
+    '52shuku ',
+    'लिंक्स: रैंकिंग लिस्ट ',
+    'बुक सर्च गाइड ',
+    'को बुकमार्क करना न भूलें या अपने दोस्तों को भी इसकी सलाह दें!',
+    'panshixsw',
+    '220book.com',
+    'URL: https://novel18.syosetu.com/n0922io/',
+    'URL: https://novel18.syosetu.com/',
+    'novel18.syosetu.com',
+    'sosoxsw.net',
+    'xszj520.com',
+    'http://www.shuhaoxs.com/book/'
 ]
 
 # ==========================================
@@ -165,11 +745,12 @@ def clean_text_content(text: str, name_replacements: Dict[str, str]) -> str:
     for phrase in UNWANTED_PHRASES:
         text = text.replace(phrase, "")
 
-    # 4. Name replacements
-    if name_replacements:
-        sorted_keys = sorted(name_replacements.keys(), key=len, reverse=True)
+    # 4. Name replacements (User dict overrides or merges with MASTER_REPLACEMENTS)
+    active_reps = {**MASTER_REPLACEMENTS, **(name_replacements or {})}
+    if active_reps:
+        sorted_keys = sorted(active_reps.keys(), key=len, reverse=True)
         for old_name in sorted_keys:
-            rep = name_replacements[old_name]
+            rep = active_reps[old_name]
             pattern = re.compile(r'\b' + re.escape(old_name) + r"(\b|'s\b)", re.IGNORECASE)
 
             def rep_func(match):
@@ -261,9 +842,9 @@ def clean_existing_promos(lines):
     return cleaned
 
 # ==========================================
-# SPLITTING & CLEANING LOGIC
+# SPLITTING & CLEANING LOGIC (FIXED FOR /SET CHUNK SIZES)
 # ==========================================
-def split_text_based_logic(input_path, output_dir, chunk_size_pages, output_format, reps, is_txt_file=False):
+def split_text_based_logic(input_path, output_dir, chunk_size, output_format, reps, is_txt_file=False):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     base_name = os.path.splitext(os.path.basename(input_path))[0]
@@ -286,41 +867,40 @@ def split_text_based_logic(input_path, output_dir, chunk_size_pages, output_form
     if not lines:
         return []
 
-    max_words_per_chunk = chunk_size_pages * WORDS_PER_PAGE
+    # FIX: Treat chunk_size as paragraph/line count per chunk so /set 500 works as expected
     collector = []
-    current_word_count = 0
-    start_page = 1
+    current_count = 0
+    start_part = 1
+    chunk_limit = max(1, chunk_size)
 
-    promo_interval_words = x * WORDS_PER_PAGE
-    words_since_last_promo = 0
+    promo_interval = max(1, x * 10)
+    items_since_promo = 0
 
     for text in lines:
         collector.append(text)
-        words_in_line = len(text.split())
-        current_word_count += words_in_line
-        words_since_last_promo += words_in_line
+        current_count += 1
+        items_since_promo += 1
 
-        if words_since_last_promo >= promo_interval_words:
+        if items_since_promo >= promo_interval:
             collector.append(PROMO_MESSAGE)
-            words_since_last_promo = 0
+            items_since_promo = 0
 
-        if current_word_count >= max_words_per_chunk:
-            end_page = start_page + chunk_size_pages - 1
+        if current_count >= chunk_limit:
             ext = 'txt' if output_format == 'txt' else 'docx'
-            part_name = f"Pages_{start_page}-{base_name}.{ext}"
+            part_name = f"Part_{start_part}-{base_name}.{ext}"
             part_path = os.path.join(output_dir, part_name)
 
             save_chunk(collector, part_path, output_format)
             generated_files.append(part_path)
 
             collector = []
-            current_word_count = 0
-            words_since_last_promo = 0
-            start_page = end_page + 1
+            current_count = 0
+            items_since_promo = 0
+            start_part += 1
 
     if collector:
         ext = 'txt' if output_format == 'txt' else 'docx'
-        part_name = f"Pages_{start_page}_to_End-{base_name}.{ext}"
+        part_name = f"Part_{start_part}_to_End-{base_name}.{ext}"
         part_path = os.path.join(output_dir, part_name)
         save_chunk(collector, part_path, output_format)
         generated_files.append(part_path)
@@ -371,7 +951,8 @@ def split_epub_logic(input_path, output_dir, chunk_size, output_format, reps):
             text_buffer.append(line)
             if line == "---":
                 chapter_count += 1
-            if chapter_count >= chunk_size:
+            
+            if chapter_count >= chunk_size or len(text_buffer) >= (chunk_size * 50):
                 ext = 'txt' if output_format == 'txt' else 'docx'
                 part_name = f"Part_{chunk_count}-{clean_name}.{ext}"
                 part_path = os.path.join(output_dir, part_name)
@@ -451,17 +1032,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"👋 Hello {name}!\n\n"
         f"🧹 **Novel Cleaner & Splitter Bot Active!**\n\n"
         f"1️⃣ Send your `.txt`, `.docx`, or `.epub` file.\n"
-        f"2️⃣ Send your replacement dictionary (e.g. `{{\"Old\": \"New\"}}`).\n"
-        f"⚙️ Use `/set 50` to change chunk size."
+        f"2️⃣ Send your replacement dictionary or type `skip` to use master defaults.\n"
+        f"⚙️ Use `/set 500` to change chunk size."
     )
 
 async def set_chunk_size(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         new_size = int(context.args[0])
         user_chunk_sizes[update.effective_user.id] = new_size
-        await update.message.reply_text(f"✅ Chunk size set to **{new_size}**.")
+        await update.message.reply_text(f"✅ Chunk size set to **{new_size}** paragraphs/lines.")
     except:
-        await update.message.reply_text("⚠️ Usage: `/set 50`")
+        await update.message.reply_text("⚠️ Usage: `/set 500`")
 
 async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE):
     doc = update.message.document
@@ -490,8 +1071,7 @@ async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(
         "✅ File received!\n"
-        "Now, send your name replacement dictionary in Python or JSON format:\n"
-        "`{\"OldName\": \"NewName\"}`"
+        "Now, send your name replacement dictionary (`{\"Old\": \"New\"}`) or type **skip** to use the master dictionary."
     )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -502,19 +1082,20 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     raw_text = update.message.text.strip()
     reps = {}
 
-    try:
-        reps = json.loads(raw_text)
-    except json.JSONDecodeError:
+    if raw_text.lower() != "skip":
         try:
-            reps = ast.literal_eval(raw_text)
-        except Exception:
-            pass
+            reps = json.loads(raw_text)
+        except json.JSONDecodeError:
+            try:
+                reps = ast.literal_eval(raw_text)
+            except Exception:
+                pass
 
-    if not isinstance(reps, dict):
-        return await update.message.reply_text(
-            "❌ Format Error! Please send a valid dictionary:\n"
-            "`{'OldName': 'NewName'}` or `{\"OldName\": \"NewName\"}`"
-        )
+        if not isinstance(reps, dict):
+            return await update.message.reply_text(
+                "❌ Format Error! Please send a valid dictionary:\n"
+                "`{'OldName': 'NewName'}` or type `skip`"
+            )
 
     file_info = user_data.pop(user_id)
     file_name = file_info['file_name'].lower()
