@@ -16,7 +16,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQu
 # CONFIGURATION
 # ==========================================
 PORT = int(os.environ.get("PORT", 8080))
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8770829070:AAEGMSTGpEoz6LsJcRFjp2wV3ZSyjZVGj-A")
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "9110472039:AAFkEYZpMZmknuGec5uhSTFExfKs1fOznfo")
 
 DEFAULT_DOCX_CHUNK = 500
 DEFAULT_EPUB_CHUNK = 1000
