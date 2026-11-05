@@ -1,3 +1,4 @@
-python-docx
 python-telegram-bot
-Flask
+python-docx
+aiohttp
+nest_asyncio
