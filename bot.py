@@ -19,7 +19,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQu
 # CONFIGURATION
 # ==========================================
 PORT = int(os.environ.get("PORT", 8080))
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "9110472039:AAFkEYZpMZmknuGec5uhSTFExfKs1fOznfo")
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "9110472039:AAFNV6AhAlvz429TzffHG3SYVcZGMbKdU2Y")
 
 DEFAULT_DOCX_CHUNK = 500
 DEFAULT_EPUB_CHUNK = 1000
@@ -42,7 +42,7 @@ PROMO_MESSAGE = (
 # ==========================================
 # MASTER REPLACEMENT DICTIONARY (540+ Entries)
 # ==========================================
-MASTER_REPLACEMENTS= { "chapter":"noveltap"}
+MASTER_REPLACEMENTS= { "chapter":"noveltap","अध्याय":"noveltap", "चैप्टर":"noveltap"}
 MASTER_REPLACEMENTS1 = {
   "Dongfang": "Raghuvanshi",
   "Ouyang": "Suryavanshi",
@@ -652,6 +652,9 @@ UNWANTED_PHRASES = [
     'www.wuxiaspot.com',
     'novel543',
     'biquge.tw',
+    "freewebnovel",
+    "wtrlab",
+    "fanmtl","wuaxizbox","https","novelfier","webnovel",
     'ixdzs8.com',
     'wtr-lab',
     '69shuba',
